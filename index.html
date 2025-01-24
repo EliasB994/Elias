@@ -3,14 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glowing Text with Background</title>
+    <title>My Original Page</title>
     <style>
         body {
             margin: 0;
             height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
             background-image: url('https://www.bing.com/th/id/OGC.beadbeafc34d76e353f244e5c97a7e51?pid=1.7&rurl=https%3a%2f%2fmedia2.giphy.com%2fmedia%2fS7E2N6lgHwrNr1BkSs%2fgiphy.gif&ehk=mp%2fzdgaH3UxRPFT6q%2fawPDQChBQsSEB3J55nHE37ZB4%3d');
             background-size: cover;
             background-position: center;
@@ -18,7 +15,7 @@
         }
 
         h1 {
-            font-family: 'Pacifico', cursive; /* Use a handwritten-style font */
+            font-family: 'Pacifico', cursive; /* Glowing title font */
             font-size: 5rem;
             color: #fff;
             text-align: center;
@@ -30,10 +27,44 @@
                 0 0 50px #ff0080,
                 0 0 75px #ff0080;
         }
+
+        p {
+            font-size: 1.2rem;
+            color: white;
+            text-align: center;
+        }
+
+        .content {
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: rgba(255, 0, 128, 0.8);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: rgba(255, 0, 128, 1);
+        }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Glowing</h1>
+    <h1>My Glowing Title</h1>
+    <div class="content">
+        <p>This is some additional content that was originally present on the page.</p>
+        <a href="#" class="button">Click Me</a>
+        <a href="#" class="button">Another Button</a>
+    </div>
 </body>
 </html>
