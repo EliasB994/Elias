@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Original Page</title>
+    <title>Elias' Portfolio</title>
     <style>
         body {
             margin: 0;
@@ -12,10 +12,11 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+            overflow: hidden;
         }
 
         h1 {
-            font-family: 'Pacifico', cursive; /* Glowing title font */
+            font-family: 'Pacifico', cursive;
             font-size: 5rem;
             color: #fff;
             text-align: center;
@@ -26,39 +27,53 @@
                 0 0 40px #ff0080,
                 0 0 50px #ff0080,
                 0 0 75px #ff0080;
+            margin-top: 20px;
         }
 
-        .content {
-            padding: 20px;
-            text-align: center;
-            color: white;
+        .parallax-container {
+            position: relative;
+            width: 100%;
+            height: calc(100vh - 100px);
+            overflow: hidden;
         }
 
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
-            margin: 10px;
+        .parallax-box {
+            position: absolute;
+            width: 150px;
+            height: 150px;
             background-color: rgba(255, 0, 128, 0.8);
-            color: white;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-            font-size: 1rem;
-            cursor: pointer;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            will-change: transform;
         }
 
-        .button:hover {
-            background-color: rgba(255, 0, 128, 1);
-        }
+        .box-1 { top: 10%; left: 20%; }
+        .box-2 { top: 30%; left: 40%; }
+        .box-3 { top: 50%; left: 60%; }
+        .box-4 { top: 70%; left: 80%; }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 </head>
 <body>
     <h1>Elias' Portfolio</h1>
-    <div class="content">
-        <p>This is some additional content that was originally present on the page.</p>
-        <a href="#" class="button">Click Me</a>
-        <a href="#" class="button">Another Button</a>
+    <div class="parallax-container">
+        <div class="parallax-box box-1"></div>
+        <div class="parallax-box box-2"></div>
+        <div class="parallax-box box-3"></div>
+        <div class="parallax-box box-4"></div>
     </div>
+    <script>
+        document.addEventListener('mousemove', (e) => {
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+
+            document.querySelectorAll('.parallax-box').forEach((box, index) => {
+                const speed = (index + 1) * 10; // Adjust speed for each box
+                const moveX = (x - 0.5) * speed;
+                const moveY = (y - 0.5) * speed;
+                box.style.transform = `translate(${moveX}px, ${moveY}px)`;
+            });
+        });
+    </script>
 </body>
 </html>
