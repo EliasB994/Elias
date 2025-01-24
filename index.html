@@ -27,52 +27,57 @@
                 0 0 40px #ff0080,
                 0 0 50px #ff0080,
                 0 0 75px #ff0080;
-            margin-top: 20px;
-        }
-
-        .parallax-container {
             position: relative;
-            width: 100%;
-            height: calc(100vh - 100px);
-            overflow: hidden;
+            transition: transform 0.1s ease-out;
         }
 
-        .parallax-box {
-            position: absolute;
-            width: 150px;
-            height: 150px;
+        .buttons-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            margin-top: 50px;
+        }
+
+        .button {
+            width: 200px;
+            padding: 15px;
+            text-align: center;
             background-color: rgba(255, 0, 128, 0.8);
+            color: white;
+            border: none;
             border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-            will-change: transform;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-family: Arial, sans-serif;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.2s, background-color 0.3s;
         }
 
-        .box-1 { top: 10%; left: 20%; }
-        .box-2 { top: 30%; left: 40%; }
-        .box-3 { top: 50%; left: 60%; }
-        .box-4 { top: 70%; left: 80%; }
+        .button:hover {
+            background-color: rgba(255, 0, 128, 1);
+            transform: translateY(-5px);
+        }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Elias' Portfolio</h1>
-    <div class="parallax-container">
-        <div class="parallax-box box-1"></div>
-        <div class="parallax-box box-2"></div>
-        <div class="parallax-box box-3"></div>
-        <div class="parallax-box box-4"></div>
+    <h1 id="title">Elias' Portfolio</h1>
+    <div class="buttons-container">
+        <a href="#" class="button">Home</a>
+        <a href="#" class="button">About</a>
+        <a href="#" class="button">Portfolio</a>
+        <a href="#" class="button">Contact</a>
     </div>
     <script>
-        document.addEventListener('mousemove', (e) => {
-            const x = e.clientX / window.innerWidth;
-            const y = e.clientY / window.innerHeight;
+        const title = document.getElementById('title');
 
-            document.querySelectorAll('.parallax-box').forEach((box, index) => {
-                const speed = (index + 1) * 10; // Adjust speed for each box
-                const moveX = (x - 0.5) * speed;
-                const moveY = (y - 0.5) * speed;
-                box.style.transform = `translate(${moveX}px, ${moveY}px)`;
-            });
+        document.addEventListener('mousemove', (e) => {
+            const x = (e.clientX / window.innerWidth - 0.5) * 10; // Adjust parallax intensity
+            const y = (e.clientY / window.innerHeight - 0.5) * 10;
+
+            title.style.transform = `translate(${x}px, ${y}px)`;
         });
     </script>
 </body>
