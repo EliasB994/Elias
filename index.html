@@ -8,11 +8,18 @@
         body {
             margin: 0;
             height: 100vh;
-            background-image: url('https://www.bing.com/th/id/OGC.beadbeafc34d76e353f244e5c97a7e51?pid=1.7&rurl=https%3a%2f%2fmedia2.giphy.com%2fmedia%2fS7E2N6lgHwrNr1BkSs%2fgiphy.gif&ehk=mp%2fzdgaH3UxRPFT6q%2fawPDQChBQsSEB3J55nHE37ZB4%3d');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+            background: black;
             overflow: hidden;
+        }
+
+        video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
         }
 
         h1 {
@@ -21,12 +28,12 @@
             color: #fff;
             text-align: center;
             text-shadow: 
-                0 0 10px #ff0080,
-                0 0 20px #ff0080,
-                0 0 30px #ff0080,
-                0 0 40px #ff0080,
-                0 0 50px #ff0080,
-                0 0 75px #ff0080;
+                0 0 10px white,
+                0 0 20px white,
+                0 0 30px white,
+                0 0 40px white,
+                0 0 50px white,
+                0 0 75px white;
             position: relative;
             transition: transform 0.1s ease-out;
         }
@@ -63,6 +70,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 </head>
 <body>
+    <video autoplay muted loop>
+        <source src="https://videos.pexels.com/video-files/2675507/2675507-hd_1920_1080_30fps.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
     <h1 id="title">Elias' Portfolio</h1>
     <div class="buttons-container">
         <a href="#" class="button">Home</a>
@@ -74,11 +86,4 @@
         const title = document.getElementById('title');
 
         document.addEventListener('mousemove', (e) => {
-            const x = (e.clientX / window.innerWidth - 0.5) * 10; // Adjust parallax intensity
-            const y = (e.clientY / window.innerHeight - 0.5) * 10;
-
-            title.style.transform = `translate(${x}px, ${y}px)`;
-        });
-    </script>
-</body>
-</html>
+            const x = (e.clientX / window.innerWidth - 0.5)
