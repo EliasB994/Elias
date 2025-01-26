@@ -25,7 +25,7 @@
         h1 {
             font-family: 'Pacifico', cursive;
             font-size: 5rem;
-            color: #fff;
+            color: black; /* Text color changed to black */
             text-align: center;
             text-shadow: 
                 0 0 10px white,
@@ -47,24 +47,25 @@
         }
 
         .button {
-            width: 200px;
+            width: 220px; /* Slightly wider buttons */
             padding: 15px;
             text-align: center;
-            background-color: rgba(255, 0, 128, 0.8);
-            color: white;
-            border: none;
-            border-radius: 10px;
+            background-color: black; /* Changed button background to black */
+            color: white; /* White text for contrast */
+            border: 2px solid white; /* Added a white border */
+            border-radius: 15px; /* Increased border radius for smoother edges */
             text-decoration: none;
             font-size: 1.2rem;
             font-family: Arial, sans-serif;
             cursor: pointer;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-            transition: transform 0.2s, background-color 0.3s;
+            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3); /* Soft white shadow */
+            transition: transform 0.2s, background-color 0.3s, color 0.3s;
         }
 
         .button:hover {
-            background-color: rgba(255, 0, 128, 1);
-            transform: translateY(-5px);
+            background-color: white; /* Background changes to white on hover */
+            color: black; /* Text changes to black on hover */
+            transform: translateY(-5px); /* Slight lift effect */
         }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
@@ -86,4 +87,12 @@
         const title = document.getElementById('title');
 
         document.addEventListener('mousemove', (e) => {
-            const x = (e.clientX / window.innerWidth - 0.5)
+            const x = (e.clientX / window.innerWidth - 0.5) * 10; // Adjust parallax intensity
+            const y = (e.clientY / window.innerHeight - 0.5) * 10;
+
+            title.style.transform = `translate(${x}px, ${y}px)`;
+        });
+    </script>
+</body>
+</html>
+
