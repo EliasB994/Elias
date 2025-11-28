@@ -1,4 +1,4 @@
-Elias Bielskis - Personal Portfolio
+Elias Abdala - Personal Portfolio
 
 This is my portfolio showcasing my work as a Computer Science student at The Manchester College. It's a simple way to track my projects and progress as an aspiring degree apprentice.
 
@@ -32,4 +32,4 @@ Open index.html in any browser.
 
 Contact
 
-elias@example.com
+abdalaelias00@gmail.com
