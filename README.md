@@ -1,6 +1,6 @@
 Elias Abdala - Personal Portfolio
 
-This is my portfolio showcasing my work as a Computer Science student at The Manchester College. It's a simple way to track my projects and progress as an aspiring degree apprentice.
+This is my example portfolio showcasing as a Computer Science student at The Manchester College. It's a simple and clean. If you'd like to see my actual portfolio, check the CloudFront in my profile OR click this link to access my LinkedIn profile, where you will be able to find it within the contact details: https://www.linkedin.com/in/elias-bielskis/
 
 Overview
 
