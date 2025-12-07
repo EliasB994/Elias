@@ -1,20 +1,20 @@
-Elias Abdala - Personal Portfolio
+## Elias Abdala - Personal Portfolio
 
 This is my example portfolio showcasing as a Computer Science student at The Manchester College. It's a simple and clean. If you'd like to see my actual portfolio, check the CloudFront in my profile OR click this link to access my LinkedIn profile, where you will be able to find it within the contact details: https://www.linkedin.com/in/elias-bielskis/
 
-Overview
+## Overview
 
 A clean, single-page website featuring:
 
-About Me
+## About Me
 
 Projects (Python Game & Portfolio)
 
-Contact Info
+## Contact Info
 
-Tech Stack
+# Tech Stack
 
-HTML & CSS (Tailwind)
+HTML & CSS
 
 Python
 
@@ -30,6 +30,6 @@ Ensure your images are in the assets/ folder.
 
 Open index.html in any browser.
 
-Contact
+## Contact
 
-abdalaelias00@gmail.com
+abdalaelias00@gmail.com OR eliasbielskis08@gmail.com
